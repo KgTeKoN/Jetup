@@ -1,7 +1,13 @@
 const express = require('express');
 const routes = express.Router();
-//const workersList = require('./src/');
+const { addAllEmployee } = require("./src/transferEmployeesInfo/registerEmployeeInDB");
+const { parseSite } = require("./src/transferEmployeesInfo/receiveEmployeesInfo");
 
-//routes.use('/api');
+(async () => {
+    const receiveData = await parseSite()
+    await addAllEmployee(receiveData)
+})();
+
+//routes.use();
 
 module.exports = routes;

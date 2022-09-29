@@ -10,3 +10,5 @@
 npm run start
 npm run makeMigrate - for make migrate
 npm run migrate - for execute migration
+
+**For start app you must run Docker, command "npm run compose", command "npm run start".**
