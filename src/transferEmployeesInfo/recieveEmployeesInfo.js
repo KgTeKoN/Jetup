@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const { urlTeam, employeesClassName, tagNames, tagPosition, tagEssay } = require("../../config");
-
+const { signUpValidator } = require('./validate.inputData')
 const parseSite = async () => {
     const getHTML = async (url) => {
         const { data } = await axios.get(url);
@@ -14,8 +14,10 @@ const parseSite = async () => {
         const position = selector(element).find(tagPosition).text();
         const dirtyEssay = selector(element).find(tagEssay).text();
         const essay = dirtyEssay.slice(1, dirtyEssay.length - 1)
-
-        result.push([name, position, essay])
+        const employeeData = [name, position, essay];
+        if (signUpValidator(employeeData)) {
+            result.push(employeeData)
+        }
     });
     return result
 }
