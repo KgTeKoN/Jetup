@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { urlTeam, employeesClassName, tagNames, tagPosition, tagEssay} = require("../../config");
+const { urlTeam, employeesClassName, tagNames, tagPosition, tagEssay } = require("../../config");
 
 const parseSite = async () => {
     const getHTML = async (url) => {
@@ -12,8 +12,8 @@ const parseSite = async () => {
     selector(employeesClassName).each((index,element) => {
         const name = selector(element).find(tagNames).text();
         const position = selector(element).find(tagPosition).text();
-        const dirtyEssy = selector(element).find(tagEssay).text();
-        const essay = dirtyEssy.slice(1, dirtyEssy.length - 1)
+        const dirtyEssay = selector(element).find(tagEssay).text();
+        const essay = dirtyEssay.slice(1, dirtyEssay.length - 1)
 
         result.push([name, position, essay])
     });

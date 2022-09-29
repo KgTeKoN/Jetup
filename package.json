@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node main.js",
     "makeMigrate": "knex migrate:make testTaskJetup --knexfile ./src/knex/knexfile.js",
-    "migrate": "knex migrate:latest --knexfile ./src/knex/knexfile.js"
+    "migrate": "knex migrate:latest --knexfile ./src/knex/knexfile.js",
+    "migrateRevert": "knex migrate:rollback --knexfile ./src/knex/knexfile.js"
   },
   "repository": {
     "type": "git",
