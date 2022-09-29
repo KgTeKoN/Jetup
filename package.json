@@ -1,0 +1,19 @@
+{
+  "name": "test_jetup",
+  "version": "1.0.0",
+  "description": "Test task for Jetup",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KgTeKoN/Jetup.git"
+  },
+  "author": "Andrii Pteruniak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KgTeKoN/Jetup/issues"
+  },
+  "homepage": "https://github.com/KgTeKoN/Jetup#readme"
+}
