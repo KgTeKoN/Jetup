@@ -8,3 +8,5 @@
 Результат опублікувати у відкритому git репозиторії та надати посилання.
 
 npm run start
+npm run makeMigrate - for make migrate
+npm run migrate - for execute migration
