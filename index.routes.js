@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = express.Router();
+const relevantEmployee = require('./src/relevantEmployees/relevantEmployees.route')
 const { addAllEmployee } = require("./src/transferEmployeesInfo/registerEmployeeInDB");
 const { parseSite } = require("./src/transferEmployeesInfo/receiveEmployeesInfo");
 
@@ -8,6 +9,6 @@ const { parseSite } = require("./src/transferEmployeesInfo/receiveEmployeesInfo"
     await addAllEmployee(receiveData)
 })();
 
-//routes.use();
+routes.use(relevantEmployee);
 
 module.exports = routes;
