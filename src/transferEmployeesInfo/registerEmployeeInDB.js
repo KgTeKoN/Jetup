@@ -1,7 +1,7 @@
 const PersonController = require('../PersonCRUD/person.controller')
 
 const addOneEmployee = async (data) => {
-    await PersonController.createPerson(data[0], data[1], data[2]);
+    await PersonController.createPerson(data.name, data.position, data.essay);
 }
 
 const addAllEmployee = async (arr) => {

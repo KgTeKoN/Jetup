@@ -14,7 +14,11 @@ const parseSite = async () => {
         const position = selector(element).find(tagPosition).text();
         const dirtyEssay = selector(element).find(tagEssay).text();
         const essay = dirtyEssay.slice(1, dirtyEssay.length - 1)
-        const employeeData = [name, position, essay];
+        const employeeData = {
+            name: name,
+            position: position,
+            essay: essay
+            }
         if (signUpValidator(employeeData)) {
             result.push(employeeData)
         }
