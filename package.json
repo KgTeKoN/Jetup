@@ -8,7 +8,8 @@
     "makeMigrate": "knex migrate:make testTaskJetup --knexfile ./src/knex/knexfile.js",
     "migrate": "knex migrate:latest --knexfile ./src/knex/knexfile.js",
     "migrateRevert": "knex migrate:rollback --knexfile ./src/knex/knexfile.js",
-    "compose": "docker-compose up"
+    "compose": "docker-compose up",
+    "dev": "nodemon main.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,8 @@
     "joi": "^17.6.2",
     "knex": "^2.3.0",
     "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
