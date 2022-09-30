@@ -10,7 +10,8 @@ class PersonDAO {
     }
 
     async findPersonWithFilter(string) {
-        const result = await db('test_task_jetup').from('employees').whereLike(`name`,`%${string}%`)
+        const result = await db('test_task_jetup').from('employees')
+            .whereLike(`name`,`%${string}%`)
             .orWhereLike(`position`, `%${string}%`)
             .orWhereLike(`essay`, `%${string}%`)
             .select('name', 'position', 'essay');
