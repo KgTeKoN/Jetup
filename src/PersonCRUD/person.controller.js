@@ -9,6 +9,15 @@ class PersonController {
             console.log(err.message);
         }
     }
+
+    async findPersonWithFilterController(string) {
+        try {
+            const result = await personDAO.findPersonWithFilter(string);
+            return result
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
 }
 
 module.exports = new PersonController();

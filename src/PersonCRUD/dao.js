@@ -8,6 +8,21 @@ class PersonDAO {
             essay: essay
         })
     }
+
+    async findPersonWithFilter(string) {
+        const result = await db('test_task_jetup').from('employees').whereLike(`name`,`%${string}%`)
+            .orWhereLike(`position`, `%${string}%`)
+            .orWhereLike(`essay`, `%${string}%`)
+            .select('name', 'position', 'essay');
+        return result;
+   }
 }
+
+const a = new PersonDAO();
+(async () => {
+    const b = await a.findPersonWithFilter('Julia')
+    console.log(b);
+})()
+
 
 module.exports = new PersonDAO()
