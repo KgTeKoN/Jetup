@@ -10,6 +10,7 @@
 npm run start
 npm run makeMigrate - for make migrate
 npm run migrate - for execute migration
+npm run test - for execute jest test
 
 http://localhost:7000/employees - route for receive all employees
 **For start app you must run Docker, command "npm run compose", command "npm run start". For use filter write it in query param like this: "http://localhost:7000/employees?filter=Maxim"**
