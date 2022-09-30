@@ -1,4 +1,4 @@
-Технології (інструменти)  які потрібно використовувати: Node.js, PostgreSQL, TypeScript *(не обов'язково)*.
+Технології (інструменти)  які потрібно використовувати: Node.js, PostgreSQL, TypeScript _(не обов'язково)_.
 
 Потрібно реалізувати проект який буде виконувати наступний функціонал:
 
@@ -13,4 +13,4 @@ npm run migrate - for execute migration
 npm run test - for execute jest test
 
 http://localhost:7000/employees - route for receive all employees
-**For start app you must run Docker, command "npm run compose", command "npm run start". For use filter write it in query param like this: "http://localhost:7000/employees?filter=Maxim"**
+**For start app you must run Docker, command "npm run compose", command "npm run migrate" command "npm run start". For use filter write it in query param like this: "http://localhost:7000/employees?filter=Maxim"**

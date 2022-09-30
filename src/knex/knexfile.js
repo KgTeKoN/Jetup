@@ -1,7 +1,11 @@
-const { pgConnectionHost,
-  pgConnectionPort, pgConnectionUser, pgConnectionPassword,
-  pgConnectionDB, knexTableName
-} = require('../../config')
+const {
+  pgConnectionHost,
+  pgConnectionPort,
+  pgConnectionUser,
+  pgConnectionPassword,
+  pgConnectionDB,
+  knexTableName,
+} = require('../../config');
 
 module.exports = {
   development: {
@@ -11,14 +15,14 @@ module.exports = {
       port: pgConnectionPort,
       user: pgConnectionUser,
       password: pgConnectionPassword,
-      database: pgConnectionDB
+      database: pgConnectionDB,
     },
     pool: {
       min: 0,
-      max: 10
+      max: 10,
     },
     migrations: {
-      tableName: knexTableName
+      tableName: knexTableName,
     },
-  }
+  },
 };
