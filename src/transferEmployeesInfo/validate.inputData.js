@@ -7,8 +7,8 @@ const signUpValidator = async (arr) => {
                 essay: arr[2]
         }
         try {
-                let result = await employeesSchema.validateAsync(objectData);
-                return result.name === objectData.name;
+                await employeesSchema.validateAsync(objectData);
+                return true;
         } catch (e) {
                 return false
         }

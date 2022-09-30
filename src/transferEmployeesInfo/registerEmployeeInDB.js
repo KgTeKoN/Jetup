@@ -1,8 +1,6 @@
 const PersonController = require('../PersonCRUD/person.controller')
-const { signUpValidator } = require("./validate.inputData");
 
 const addOneEmployee = async (data) => {
-    await signUpValidator(data);
     await PersonController.createPerson(data[0], data[1], data[2]);
 }
 

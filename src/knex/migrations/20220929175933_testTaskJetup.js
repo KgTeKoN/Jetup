@@ -3,7 +3,7 @@ exports.up = function(knex) {
         t.increments("id").primary();
         t.string("name").notNullable();
         t.string("position").notNullable();
-        t.string("essay").unique();
+        t.text("essay").unique();
         t.timestamps(true, true);
     })
 };
