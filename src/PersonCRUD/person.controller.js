@@ -18,6 +18,15 @@ class PersonController {
             console.log(err.message);
         }
     }
+
+    async getAllEmployeesController () {
+        try {
+            const result = await personDAO.getAllEmployees();
+            return result
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
 }
 
 module.exports = new PersonController();

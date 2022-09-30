@@ -16,13 +16,12 @@ class PersonDAO {
             .select('name', 'position', 'essay');
         return result;
    }
+
+    async getAllEmployees () {
+        const result = await db('test_task_jetup').from('employees')
+            .select('name', 'position', 'essay');
+        return result;
+    }
 }
-
-const a = new PersonDAO();
-(async () => {
-    const b = await a.findPersonWithFilter('Julia')
-    console.log(b);
-})()
-
 
 module.exports = new PersonDAO()
