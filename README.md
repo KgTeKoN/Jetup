@@ -14,4 +14,4 @@ http://localhost:7000/employees - route for receive all employees
 3. npm run compose
 4. npm run migrate
 5. npm run start 
-**For use filter write it in query param like this: "http://localhost:7000/employees?filter=Maxim"**
+/n**For use filter write it in query param like this: "http://localhost:7000/employees?filter=Maxim"**
